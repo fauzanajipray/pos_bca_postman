@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "9d262d3c-ef98-4cc8-b887-7945b34ed3c5",
+		"name": "POS BCA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29525540"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "tiara@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tiara",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Category",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/category-list",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"category-list"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.request.headers.add({",
+					"",
+					"    key:\"X-Requested-With\",",
+					"",
+					"    value: \"XMLHttpRequest\"",
+					"",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNjk0MDc1OTY0LCJleHAiOjE2OTQwNzk1NjQsIm5iZiI6MTY5NDA3NTk2NCwianRpIjoiVXVjOFpEYXF5M1cxSmFHTiIsInN1YiI6IjEiLCJwcnYiOiI2OWY0ZDFkOWNmZGIxMzAxMDNhODM3M2ViZGZhN2IxYjczNGVmYzM4In0.A34fs_kbbIqc-1KjZcaAaK8b0-Bwv4EtMMJ7g8Y8AR4",
+			"type": "string"
+		},
+		{
+			"key": "base_url",
+			"value": "http://bca-pos-laravel.test/api",
+			"type": "string"
+		}
+	]
+}
