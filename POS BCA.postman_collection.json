@@ -103,13 +103,13 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{base_url}}/category/4",
+							"raw": "{{base_url}}/category/1",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"category",
-								"4"
+								"1"
 							]
 						}
 					},
@@ -134,6 +134,86 @@
 							],
 							"path": [
 								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "List Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transaction",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Others",
+									"type": "text"
+								},
+								{
+									"key": "outlet_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/transaction",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Transaction",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/transaction/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction",
 								"1"
 							]
 						}
@@ -320,12 +400,22 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/product",
+							"raw": "{{base_url}}/product?name=top&category_id=f%26",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"product"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "top"
+								},
+								{
+									"key": "category_id",
+									"value": "f&"
+								}
 							]
 						}
 					},
@@ -341,17 +431,17 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Fried Chicken",
+									"value": "Fried Noodle",
 									"type": "text"
 								},
 								{
 									"key": "sku",
-									"value": "501",
+									"value": "5015",
 									"type": "text"
 								},
 								{
 									"key": "category_id",
-									"value": "4",
+									"value": "1",
 									"type": "text"
 								},
 								{
@@ -361,9 +451,8 @@
 								},
 								{
 									"key": "photo",
-									"value": "",
-									"type": "text",
-									"disabled": true
+									"type": "file",
+									"src": "/Users/macmini/Downloads/scm-full-of-stars.jpg"
 								}
 							]
 						},
@@ -457,13 +546,13 @@
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/product/3",
+							"raw": "{{base_url}}/product/7",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"product",
-								"3"
+								"7"
 							]
 						}
 					},
@@ -471,6 +560,31 @@
 				},
 				{
 					"name": "Edit Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/product/8",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"product",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Photo Product",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
