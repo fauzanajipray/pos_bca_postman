@@ -69,7 +69,7 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Others",
+									"value": "Ice Cream",
 									"type": "text"
 								},
 								{
@@ -81,13 +81,13 @@
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/category/9",
+							"raw": "{{base_url}}/category/4",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"category",
-								"9"
+								"4"
 							]
 						}
 					},
@@ -128,93 +128,13 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{base_url}}/category/1",
+							"raw": "{{base_url}}/category/9",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"category",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Transaction",
-			"item": [
-				{
-					"name": "List Transaction",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "{{base_url}}/transaction",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"transaction"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Create Transaction",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "name",
-									"value": "Others",
-									"type": "text"
-								},
-								{
-									"key": "outlet_id",
-									"value": "1",
-									"type": "text",
-									"disabled": true
-								}
-							]
-						},
-						"url": {
-							"raw": "{{base_url}}/transaction",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"transaction"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Detail Transaction",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": []
-						},
-						"url": {
-							"raw": "{{base_url}}/transaction/1",
-							"host": [
-								"{{base_url}}"
-							],
-							"path": [
-								"transaction",
-								"1"
+								"9"
 							]
 						}
 					},
@@ -377,12 +297,12 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{base_url}}/customer/1",
+							"raw": "{{base_url}}/customer-detail/1",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
-								"customer",
+								"customer-detail",
 								"1"
 							]
 						}
@@ -400,7 +320,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/product?name=top&category_id=f%26",
+							"raw": "{{base_url}}/product?name=top",
 							"host": [
 								"{{base_url}}"
 							],
@@ -414,7 +334,8 @@
 								},
 								{
 									"key": "category_id",
-									"value": "f&"
+									"value": "ccc",
+									"disabled": true
 								}
 							]
 						}
@@ -596,13 +517,487 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{base_url}}/product/4",
+							"raw": "{{base_url}}/product/8/photo",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"product",
-								"4"
+								"8",
+								"photo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "List Transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/transaction",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subtotal_price",
+									"value": "9999.89",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "total_price",
+									"value": "195656.58",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "total_qty",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "payment_method",
+									"value": "BCA",
+									"type": "text"
+								},
+								{
+									"key": "product_id[0][product_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "product_id[0][qty]",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "product_id[1][product_id]",
+									"value": "3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "product_id[1][qty]",
+									"value": "5",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/transaction",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Transaction",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/transaction/2",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Transaction Guarantee Code",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/guarantee-code/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"guarantee-code",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Refund",
+			"item": [
+				{
+					"name": "Create Refund",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "reason",
+									"value": "Rejected product",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/refund/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"refund",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Guarantee Code",
+			"item": [
+				{
+					"name": "List Guarantee Code",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/guarantee-code",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"guarantee-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Guarantee Code",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/guarantee-code/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"guarantee-code",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Guarantee Code",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Makanan Ringan",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "outlet_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/guarantee-code/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"guarantee-code",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Discount",
+			"item": [
+				{
+					"name": "List Discount",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/discount",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"discount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Discount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_date",
+									"value": "2023-09-27",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-09-30",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Frequency",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "10000",
+									"type": "text"
+								},
+								{
+									"key": "discount_type",
+									"value": "Percentage",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/discount",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"discount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Discount",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start_date",
+									"value": "2023-09-20",
+									"type": "text"
+								},
+								{
+									"key": "end_date",
+									"value": "2023-09-30",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Amount",
+									"type": "text"
+								},
+								{
+									"key": "value",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "discount_type",
+									"value": "Amount",
+									"type": "text"
+								},
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/discount/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"discount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Discount",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/discount/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"discount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Discount",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Makanan Ringan",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "outlet_id",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/discount/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"discount",
+								"1"
 							]
 						}
 					},
