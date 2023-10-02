@@ -320,7 +320,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{base_url}}/product?name=top",
+							"raw": "{{base_url}}/product",
 							"host": [
 								"{{base_url}}"
 							],
@@ -330,7 +330,8 @@
 							"query": [
 								{
 									"key": "name",
-									"value": "top"
+									"value": "top",
+									"disabled": true
 								},
 								{
 									"key": "category_id",
@@ -352,22 +353,23 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "Fried Noodle",
-									"type": "text"
+									"value": "Fried Rice 1",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "sku",
-									"value": "5015",
+									"value": "501512",
 									"type": "text"
 								},
 								{
 									"key": "category_id",
-									"value": "1",
+									"value": "100",
 									"type": "text"
 								},
 								{
 									"key": "price",
-									"value": "20000",
+									"value": "asdadsaf",
 									"type": "text"
 								},
 								{
@@ -492,13 +494,13 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{base_url}}/product/8",
+							"raw": "{{base_url}}/product/5",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"product",
-								"8"
+								"5"
 							]
 						}
 					},
@@ -517,13 +519,13 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{base_url}}/product/8/photo",
+							"raw": "{{base_url}}/product/5/photo",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"product",
-								"8",
+								"5",
 								"photo"
 							]
 						}
@@ -590,20 +592,18 @@
 								},
 								{
 									"key": "product_id[0][qty]",
-									"value": "10",
+									"value": "100",
 									"type": "text"
 								},
 								{
 									"key": "product_id[1][product_id]",
 									"value": "3",
-									"type": "text",
-									"disabled": true
+									"type": "text"
 								},
 								{
 									"key": "product_id[1][qty]",
-									"value": "5",
-									"type": "text",
-									"disabled": true
+									"value": "500",
+									"type": "text"
 								}
 							]
 						},
@@ -691,13 +691,13 @@
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/refund/3",
+							"raw": "{{base_url}}/refund/5",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"refund",
-								"3"
+								"5"
 							]
 						}
 					},
@@ -748,13 +748,13 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{base_url}}/guarantee-code/1",
+							"raw": "{{base_url}}/guarantee-code/35",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"guarantee-code",
-								"1"
+								"35"
 							]
 						}
 					},
@@ -855,19 +855,23 @@
 								},
 								{
 									"key": "value",
-									"value": "10000",
+									"value": "6",
 									"type": "text"
 								},
 								{
 									"key": "discount_type",
-									"value": "Percentage",
+									"value": "Product",
 									"type": "text"
 								},
 								{
 									"key": "product_id",
 									"value": "1",
-									"type": "text",
-									"disabled": true
+									"type": "text"
+								},
+								{
+									"key": "product_qty",
+									"value": "5",
+									"type": "text"
 								}
 							]
 						},
