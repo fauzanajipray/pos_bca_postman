@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Category",
+			"name": "Category ✅",
 			"item": [
 				{
 					"name": "List Category",
@@ -143,7 +143,7 @@
 			]
 		},
 		{
-			"name": "Customer",
+			"name": "Customer ✅",
 			"item": [
 				{
 					"name": "List Customer",
@@ -221,17 +221,23 @@
 									"key": "phone",
 									"value": "081546852589",
 									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "Female",
+									"description": "Male/Female",
+									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/customer/1",
+							"raw": "{{base_url}}/customer/6",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"customer",
-								"1"
+								"6"
 							]
 						}
 					},
@@ -312,7 +318,7 @@
 			]
 		},
 		{
-			"name": "Product",
+			"name": "Product ✅",
 			"item": [
 				{
 					"name": "List Product",
@@ -430,6 +436,12 @@
 									"value": "",
 									"type": "text",
 									"disabled": true
+								},
+								{
+									"key": "photo_change",
+									"value": "",
+									"description": "1/0",
+									"type": "text"
 								}
 							]
 						},
@@ -535,7 +547,7 @@
 			]
 		},
 		{
-			"name": "Transaction",
+			"name": "Transaction ✅",
 			"item": [
 				{
 					"name": "List Transaction",
@@ -549,6 +561,13 @@
 							],
 							"path": [
 								"transaction"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "20",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -563,46 +582,39 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "subtotal_price",
-									"value": "9999.89",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "total_price",
-									"value": "195656.58",
-									"type": "text",
-									"disabled": true
-								},
-								{
-									"key": "total_qty",
-									"value": "5",
-									"type": "text",
-									"disabled": true
-								},
-								{
 									"key": "payment_method",
 									"value": "BCA",
+									"description": "BCA/Cash",
 									"type": "text"
 								},
 								{
-									"key": "product_id[0][product_id]",
+									"key": "products[0][product_id]",
 									"value": "1",
 									"type": "text"
 								},
 								{
-									"key": "product_id[0][qty]",
+									"key": "products[0][qty]",
 									"value": "100",
 									"type": "text"
 								},
 								{
-									"key": "product_id[1][product_id]",
+									"key": "products[1][product_id]",
 									"value": "3",
 									"type": "text"
 								},
 								{
-									"key": "product_id[1][qty]",
+									"key": "products[1][qty]",
 									"value": "500",
+									"type": "text"
+								},
+								{
+									"key": "customer_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "notes",
+									"value": "",
 									"type": "text"
 								}
 							]
@@ -614,6 +626,55 @@
 							],
 							"path": [
 								"transaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Calculate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subtotal_price",
+									"value": "9999.89",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "products[0][product_id]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "products[0][qty]",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "products[1][product_id]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "products[1][qty]",
+									"value": "500",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/transaction/calculate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"transaction",
+								"calculate"
 							]
 						}
 					},
@@ -632,13 +693,13 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{base_url}}/transaction/2",
+							"raw": "{{base_url}}/transaction/5",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"transaction",
-								"2"
+								"5"
 							]
 						}
 					},
@@ -672,7 +733,7 @@
 			]
 		},
 		{
-			"name": "Refund",
+			"name": "Refund ✅",
 			"item": [
 				{
 					"name": "Create Refund",
@@ -683,21 +744,20 @@
 							"mode": "formdata",
 							"formdata": [
 								{
-									"key": "reason",
+									"key": "refund_reason",
 									"value": "Rejected product",
-									"type": "text",
-									"disabled": true
+									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{base_url}}/refund/5",
+							"raw": "{{base_url}}/refund/1",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"refund",
-								"5"
+								"1"
 							]
 						}
 					},
@@ -706,7 +766,7 @@
 			]
 		},
 		{
-			"name": "Guarantee Code",
+			"name": "Guarantee Code ✅",
 			"item": [
 				{
 					"name": "List Guarantee Code",
@@ -721,12 +781,18 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{base_url}}/guarantee-code",
+							"raw": "{{base_url}}/guarantee-code?transaction_id=1",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"guarantee-code"
+							],
+							"query": [
+								{
+									"key": "transaction_id",
+									"value": "1"
+								}
 							]
 						}
 					},
@@ -748,13 +814,13 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{base_url}}/guarantee-code/35",
+							"raw": "{{base_url}}/guarantee-code/5",
 							"host": [
 								"{{base_url}}"
 							],
 							"path": [
 								"guarantee-code",
-								"35"
+								"5"
 							]
 						}
 					},
@@ -798,7 +864,7 @@
 			]
 		},
 		{
-			"name": "Discount",
+			"name": "Discount ✅",
 			"item": [
 				{
 					"name": "List Discount",
@@ -851,6 +917,7 @@
 								{
 									"key": "type",
 									"value": "Frequency",
+									"description": "Amount/Frequency",
 									"type": "text"
 								},
 								{
@@ -861,11 +928,12 @@
 								{
 									"key": "discount_type",
 									"value": "Product",
+									"description": "Amount, Percentage, Product",
 									"type": "text"
 								},
 								{
 									"key": "product_id",
-									"value": "1",
+									"value": "100",
 									"type": "text"
 								},
 								{
@@ -903,27 +971,29 @@
 							"formdata": [
 								{
 									"key": "start_date",
-									"value": "2023-09-20",
+									"value": "2023-09-28",
 									"type": "text"
 								},
 								{
 									"key": "end_date",
-									"value": "2023-09-30",
+									"value": "2023-09-29",
 									"type": "text"
 								},
 								{
 									"key": "type",
-									"value": "Amount",
+									"value": "Frequency",
+									"description": "Amount/Frequency",
 									"type": "text"
 								},
 								{
 									"key": "value",
-									"value": "2000",
+									"value": "6",
 									"type": "text"
 								},
 								{
 									"key": "discount_type",
 									"value": "Amount",
+									"description": "Amount, Percentage, Product",
 									"type": "text"
 								},
 								{
@@ -931,6 +1001,11 @@
 									"value": "1",
 									"type": "text",
 									"disabled": true
+								},
+								{
+									"key": "discount_value",
+									"value": "50000",
+									"type": "text"
 								}
 							]
 						},
@@ -1010,42 +1085,47 @@
 			]
 		},
 		{
-			"name": "Login",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "X-Requested-With",
-						"value": "XMLHttpRequest",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "email",
-							"value": "tiara@gmail.com",
-							"type": "text"
+			"name": "Authentication ✅",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "tiara@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "tiara",
+									"type": "text"
+								}
+							]
 						},
-						{
-							"key": "password",
-							"value": "tiara",
-							"type": "text"
+						"url": {
+							"raw": "{{base_url}}/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"login"
+							]
 						}
-					]
-				},
-				"url": {
-					"raw": "{{base_url}}/login",
-					"host": [
-						"{{base_url}}"
-					],
-					"path": [
-						"login"
-					]
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	],
 	"auth": {
