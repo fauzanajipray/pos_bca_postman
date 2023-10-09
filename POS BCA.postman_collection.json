@@ -940,6 +940,13 @@
 									"key": "product_qty",
 									"value": "5",
 									"type": "text"
+								},
+								{
+									"key": "discount_value",
+									"value": "15000",
+									"description": "if discount_type = amount / percentage",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
