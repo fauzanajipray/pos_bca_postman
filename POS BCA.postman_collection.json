@@ -582,6 +582,17 @@
 							"mode": "formdata",
 							"formdata": [
 								{
+									"key": "customer_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "point_used",
+									"value": "Redeem All",
+									"description": "Redeem All / Not Redeem at All",
+									"type": "text"
+								},
+								{
 									"key": "payment_method",
 									"value": "BCA",
 									"description": "BCA/Cash",
@@ -605,11 +616,6 @@
 								{
 									"key": "products[1][qty]",
 									"value": "500",
-									"type": "text"
-								},
-								{
-									"key": "customer_id",
-									"value": "1",
 									"type": "text"
 								},
 								{
